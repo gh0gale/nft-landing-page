@@ -1,0 +1,27 @@
+.super{
+    background-color: black;
+    height: 100vh;
+}
+
+.super-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    padding-left: 2rem;
+    margin-top: 6rem;
+}
+
+.super-content a{
+    color: white;
+    text-decoration: none;
+}
+
+.super-card{
+    display: flex;
+    margin-top: 3rem;
+    margin: 6rem;
+    gap: 3rem;
+    
+    
+}

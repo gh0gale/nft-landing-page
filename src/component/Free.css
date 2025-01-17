@@ -1,0 +1,59 @@
+.free {
+  margin-top: -50px;
+  padding: 0 30px;
+  background-color: black;
+  height: 100vh;
+}
+
+.free-container {
+  padding: 30px;
+  margin: 50px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #ff3998, #ff8139, #39ffa0);
+  display: flex;
+  height: 50vh;
+}
+
+.free-bg {
+  z-index: -1;
+}
+
+.free-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 30px;
+}
+
+.cards {
+  display: flex;
+  position: absolute;
+  top: 44rem;
+  right: 48%;
+}
+
+.card1 {
+  top: 0;
+  position: absolute;
+  transform: rotate(-10deg);
+  z-index: 3;
+  font-size: 0.6rem;
+}
+
+.card1 .card-image img {
+  height: 10rem;
+  width: 12rem;
+}
+
+.card2 {
+  top: 0;
+  z-index: 2;
+  position: absolute;
+  left: 10rem;
+  transform: rotate(5deg);
+  font-size: 0.7rem;
+}
+
+.card2 .card-image img {
+  height: 10rem;
+}
