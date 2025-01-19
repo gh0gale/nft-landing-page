@@ -1,13 +1,12 @@
 .free {
-  margin-top: -50px;
-  padding: 0 30px;
+
   background-color: black;
-  height: 100vh;
+  height: 50vh;
 }
 
 .free-container {
   padding: 30px;
-  margin: 50px;
+  margin: 0px 50px;
   border-radius: 20px;
   background: linear-gradient(to right, #ff3998, #ff8139, #39ffa0);
   display: flex;
@@ -28,7 +27,7 @@
 .cards {
   display: flex;
   position: absolute;
-  top: 44rem;
+  top: -2rem;
   right: 48%;
 }
 

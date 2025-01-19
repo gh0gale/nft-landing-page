@@ -1,0 +1,47 @@
+
+
+   .like {
+    background-color: #000;
+    margin: -0.8rem 0rem;
+}
+
+.like .like-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin: 10px 20px;
+}
+
+.like .like-container .like-content {
+    background-color: #555555;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    border-radius: 2rem;
+   margin-top: 8rem;
+}
+
+.like .like-container .like-content .like-img img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+.like .like-container .like-content .like-title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.like .like-container .like-content .description,
+.like .like-container .like-content .like-desc {
+    color: #cccccc;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    
+}
+
+.like-main {
+    background-color: #000;
+}

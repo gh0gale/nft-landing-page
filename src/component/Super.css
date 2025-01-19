@@ -1,6 +1,12 @@
 .super{
     background-color: black;
     height: 100vh;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.super-container{
+    margin: 0px;
 }
 
 .super-content {
@@ -9,7 +15,7 @@
     gap: 20px;
     color: white;
     padding-left: 2rem;
-    margin-top: 6rem;
+    padding-top: 4rem;
 }
 
 .super-content a{

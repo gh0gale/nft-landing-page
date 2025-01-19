@@ -1,12 +1,14 @@
-.home{
-  background-color:black;
+.signup {
+
+  background-color: black;
+  padding-top: 4rem;
+  overflow-y: hidden;
 }
 
 .home-container {
   display: flex;
   padding-top: 40px;
   height: 100vh;
-
 }
 
 .home-content {
