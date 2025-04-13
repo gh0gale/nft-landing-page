@@ -14,7 +14,7 @@ body {
 /* Container */
 .home {
   margin-top: -3rem;
-  padding: 0px;
+  padding: 0;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -31,6 +31,7 @@ body {
   max-width: 1200px;
   width: 100%;
   gap: 2rem;
+  padding: 2rem 1rem;
 }
 
 /* Content */
@@ -64,18 +65,19 @@ body {
   font-size: 1rem;
   border-radius: 50px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-  box-shadow: 0 8px 24px rgba(0, 252, 167, 0.3);
   font-weight: 600;
   width: 200px;
+  box-shadow: 0 8px 24px rgba(0, 252, 167, 0.3);
+  animation: pulseGlow 2.5s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.signup-btn:hover {
+.signup-btn-home:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(0, 252, 167, 0.4);
 }
 
-
+/* Image Section */
 .image-container {
   flex: 1;
   position: relative;
@@ -93,16 +95,7 @@ body {
   position: relative;
 }
 
-
-.ellipse {
-  position: absolute;
-  border-radius: 50%;
-  background-color: #00fca7;
-  filter: blur(100px);
-  opacity: 0.15;
-  animation: float 6s ease-in-out infinite alternate;
-}
-
+/* Ellipses (glow) */
 .ellipse-container {
   position: absolute;
   top: 0;
@@ -136,34 +129,13 @@ body {
   right: -10%;
 }
 
-
+/* Animations */
 @keyframes float {
   0% {
     transform: translateY(0px);
   }
   100% {
     transform: translateY(20px);
-  }
-}
-
-
-@media (max-width: 768px) {
-  .home-container {
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-  }
-
-  .title {
-    font-size: 2.2rem;
-  }
-
-  .info {
-    font-size: 1rem;
-  }
-
-  .signup-btn {
-    padding: 0.8rem 1.5rem;
   }
 }
 
@@ -182,13 +154,54 @@ body {
   }
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
 
-.signup-btn-home {
-  animation: pulseGlow 2.5s ease-in-out infinite;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .image-content img.home-image {
+    max-width: 400px;
+  }
 }
 
-.contact-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0, 252, 167, 0.4);
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .info {
+    font-size: 0.95rem;
+  }
+
+  .signup-btn-home {
+    padding: 0.8rem 1.5rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .info {
+    font-size: 0.9rem;
+  }
+
+  .signup-btn-home {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  .image-content img.home-image {
+    max-width: 100%;
+    border-radius: 1.5rem;
+  }
 }
