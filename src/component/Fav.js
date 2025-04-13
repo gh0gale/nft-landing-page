@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Card } from "./Card";
 
 import wellness from "../assets/wellness.jpg";
@@ -11,16 +11,7 @@ import e from "../assets/5.jpg";
 import "./Fav.css";
 
 export const Free = () => {
-  const scrollRef = useRef(null);
-
-  const scroll = (dir) => {
-    const cardWidth = scrollRef.current.children[0].offsetWidth + 24; // card width + gap
-    scrollRef.current.scrollBy({
-      left: dir === "left" ? -cardWidth : cardWidth,
-      behavior: "smooth",
-    });
-  };
-
+  
   return (
     <div className="favorites-wrapper">
       <div className="favorites-header">
@@ -31,11 +22,8 @@ export const Free = () => {
       </div>
 
       <div className="favorites-carousel-container">
-        <button className="scroll-btn left" onClick={() => scroll("left")}>
-          &#8249;
-        </button>
-
-        <div className="favorites-carousel" ref={scrollRef}>
+  
+        <div className="favorites-carousel" >
           <Card
             image={wellness}
             title="Wellness Wednesdays"
@@ -93,10 +81,6 @@ export const Free = () => {
             time="45 min"
           />
         </div>
-
-        <button className="scroll-btn right" onClick={() => scroll("right")}>
-          &#8250;
-        </button>
       </div>
     </div>
   );

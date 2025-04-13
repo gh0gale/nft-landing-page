@@ -40,7 +40,8 @@
 
 .favorites-carousel {
   display: flex;
-  overflow-x: auto;
+  flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+  justify-content: center; /* Center the items when wrapped */
   gap: 1.5rem;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -112,15 +113,14 @@
   position: absolute;
   right: 0;
 }
-/* In fav.css */
+
+/* Image fix */
 .favorites-carousel img {
   width: 100%;
   height: auto;
-  max-width: 100%;
   object-fit: cover; /* Maintain aspect ratio */
   border-radius: 1rem;
 }
-
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -144,6 +144,8 @@
 
   .favorites-carousel {
     margin: 0 1rem;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    justify-content: center; /* Center items */
   }
 
   .scroll-btn {
