@@ -8,7 +8,7 @@ export const Nav = () => {
     <nav>
       <div className="brand-container">
         <div className="brand">
-          <img className="brand-logo" src={logo}></img>
+          <img className="brand-logo" src={logo} alt="brand-logo"></img>
         </div>
         <div className="toggle-container">
           <div className="toggle"></div>
