@@ -1,58 +1,141 @@
-.free {
-
-  background-color: black;
-  height: 50vh;
+.favorites-wrapper {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
-.free-container {
-  padding: 30px;
-  margin: 0px 50px;
-  border-radius: 20px;
-  background: linear-gradient(to right, #ff3998, #ff8139, #39ffa0);
+.favorites-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.favorites-icon {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.favorites-title {
+  font-size: 2rem;
+  color: #00fca7;
+  margin-bottom: 0.5rem;
+}
+
+.favorites-desc {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+/* Carousel */
+.favorites-carousel-container {
+  position: relative;
   display: flex;
-  height: 50vh;
+  align-items: center;
+  justify-content: center;
 }
 
-.free-bg {
-  z-index: -1;
-}
-
-.free-content {
+.favorites-carousel {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding-left: 30px;
+  overflow-x: auto;
+  gap: 1.5rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  margin: 0 3rem;
 }
 
-.cards {
+.card {
+  background: #111;
+  border-radius: 1rem;
+  padding: 1rem;
+  scroll-snap-align: center;
+  flex: 0 0 260px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 252, 167, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #00fca7;
+}
+
+.card-meta {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Buttons */
+.scroll-btn {
+  background: #00fca7;
+  color: #000;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.scroll-btn:hover {
+  background: #00fca7cc;
+}
+
+.scroll-btn.left {
+  position: absolute;
+  left: 0;
+}
+
+.scroll-btn.right {
+  position: absolute;
+  right: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .favorites-carousel-container {
+    flex-direction: column;
+  }
+
+  .favorites-carousel {
+    margin: 0 1rem;
+  }
+
+  .scroll-btn {
+    display: none;
+  }
+
+  .card {
+    flex: 0 0 80%;
+  }
+}
+.favorites-carousel {
   display: flex;
-  position: absolute;
-  top: -2rem;
-  right: 48%;
+  overflow-x: auto;
+  gap: 1.5rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  margin: 0 3rem;
+
+  /* Hides scrollbar for Webkit (Chrome, Safari) */
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* Internet Explorer 10+ */
 }
 
-.card1 {
-  top: 0;
-  position: absolute;
-  transform: rotate(-10deg);
-  z-index: 3;
-  font-size: 0.6rem;
-}
-
-.card1 .card-image img {
-  height: 10rem;
-  width: 12rem;
-}
-
-.card2 {
-  top: 0;
-  z-index: 2;
-  position: absolute;
-  left: 10rem;
-  transform: rotate(5deg);
-  font-size: 0.7rem;
-}
-
-.card2 .card-image img {
-  height: 10rem;
+.favorites-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }

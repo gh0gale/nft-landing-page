@@ -1,90 +1,168 @@
-.home{
-  background-color:black;
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Container */
+.home {
+  margin-top: -3rem;
+  padding: 0px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
 }
 
 .home-container {
   display: flex;
-  padding-top: 40px;
-  height: 100vh;
-
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
 }
 
+/* Content */
 .home-content {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-left: 50px;
-}
-
-.sub-title {
-  font-size: x-large;
-  font-weight: 500;
-  color: #ff3998;
+  flex: 1;
+  min-width: 300px;
 }
 
 .title {
-  font-size: 38px;
-  font-weight: 800;
-  color: white;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
 }
 
 .info {
-  color: grey;
-  font-size: 20px;
-  font-weight: 400;
-  max-width: 60%;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #7d7d7d;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  font-weight: 500;
 }
 
-.signup-btn {
-  width: 200px;
-  color: white;
-  background-color: black;
-  font-weight: bold;
-  padding: 1rem 3rem;
-  border-radius: 2rem;
-  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-  border: solid 3px transparent;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ),
-    linear-gradient(101deg, #ff3998, #ff8139);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  box-shadow: 2px 1000px 1px black inset;
-  transition: 0.5s ease-in-out;
+.signup-btn-home {
+  background-color: #00fca7;
+  color: #000000;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
   cursor: pointer;
-  &:hover {
-    box-shadow: none;
-  }
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 252, 167, 0.3);
+  font-weight: 600;
+  width: 200px;
 }
 
 .signup-btn:hover {
-  box-shadow: none;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 252, 167, 0.4);
 }
 
+/* Image */
 .image-container {
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
+  flex: 1;
   position: relative;
-  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
 }
 
-.image-container .ellipse-container .ellipse {
-  z-index: -1;
+.image-content img.home-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* Ellipses - themed to teal only */
+.ellipse {
   position: absolute;
-  height: 15rem;
-  width: 15rem;
+  border-radius: 50%;
+  background-color: #00fca7;
   filter: blur(100px);
+  opacity: 0.15;
+  animation: float 6s ease-in-out infinite alternate;
 }
-.image-container .ellipse-container .pink {
-  top: 40%;
-  right: 40%;
-  background-color: #ff3998;
+
+.ellipse-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
-.image-container .ellipse-container .orange {
-  bottom: 40%;
-  left: 40%;
-  background-color: #ff8139;
+
+.ellipse-container div {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #00fca7;
+  filter: blur(100px);
+  opacity: 0.15;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+.ellipse-container div:first-child {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: -10%;
+}
+
+.ellipse-container div:last-child {
+  width: 250px;
+  height: 250px;
+  bottom: 5%;
+  right: -10%;
+}
+
+/* Float animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .info {
+    font-size: 1rem;
+  }
+
+  .signup-btn {
+    padding: 0.8rem 1.5rem;
+  }
 }

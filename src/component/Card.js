@@ -1,31 +1,15 @@
-import React from 'react'
-import './Card.css';
-import superEth from "../assets/supereth.png";
+import React from "react";
+import "./Card.css"; // optional
 
-export const Card = ({image,series,title,price,tag,time}) => {
+export const Card = ({ image, title, series, price, tag, time }) => {
   return (
     <div className="card">
-      <div className="card-image">
-        <img src={image} alt="super1" />
-      </div>
-      <div className="card-content">
-        <div className="card-heading">
-          <span className="card-series">{series}</span>
-          <span className="card-top">Top bid</span>
-        </div>
-        <div className="card-details">
-          <h4 className="card-title">{title}</h4>
-          <div className="card-price">
-            <img src={superEth} alt="super eth" />
-            <h4>{price} ETH</h4>
-          </div>
-        </div>
-        <div className="card-sub-details">
-          <span>#{tag}</span>
-          <span>{time} day left</span>
-        </div>
-      </div>
+      <img src={image} alt={title} className="card-image" />
+      <h3 className="card-title">{title}</h3>
+      <p className="card-meta">{series}</p>
+      <p className="card-meta">{price}</p>
+      <p className="card-meta">{tag}</p>
+      <p className="card-meta">{time}</p>
     </div>
   );
-}
-
+};

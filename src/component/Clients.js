@@ -9,6 +9,7 @@ export const Clients = () => {
   const data = [clients1, clients2, clients3, clients4, clients5];
   return (
     <div className="clients">
+      <h1 className="clients-title">Our Clients</h1>
       <div className="client-container">
         <div className="client-content">
           {data.map((clients, index) => (

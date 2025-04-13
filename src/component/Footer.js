@@ -8,15 +8,15 @@ export default function Footer() {
   const links = [
     {
       title: "About",
-      data: ["About", "Terms", "Legal"],
+      data: ["Terms", "Legal"],
     },
     {
-      title: "NFT",
-      data: ["OpenSea", "Maker", "Learn"],
+      title: "Services",
+      data: ["Team Building", "Workshops", "Wellness"],
     },
     {
       title: "Contact",
-      data: ["Press", "Support"],
+      data: ["info.onethrive@gmail.com", "+91 88673 97613", "+91 79691 01774"],
     },
     {
       title: "Social",
@@ -36,7 +36,6 @@ export default function Footer() {
           <div className="brand">
             <img src={logo} alt="logo" />
           </div>
-          <p>Exclusive NFT Collection</p>
           <ul>
             {socialLink.map((link, index) => (
               <li key={index}>{link}</li>
@@ -58,10 +57,9 @@ export default function Footer() {
           })}
         </div>
       </div>
-      <div className="lower">
-        <span>&copy; Copyright 2025 NFT</span>
-        <span>Launching August 2025</span>
-      </div>
+      {/* <div className="lower">
+        <p className="copy">&copy; Copyright 2025 OneThrive</p>
+      </div> */}
     </footer>
   );
 }

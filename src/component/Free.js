@@ -1,51 +1,99 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Card } from "./Card";
-import icon from "../assets/icon.png";
+
+import wellness from "../assets/wellness.jpg";
+import creative from "../assets/creative.jpg";
+import a from "../assets/1.jpg";
+import b from "../assets/2.jpg";
+import c from "../assets/3.jpg";
+import d from "../assets/4.jpg";
+import e from "../assets/5.jpg";
 import "./Free.css";
-import super1 from "../assets/super1.png";
-import release2 from "../assets/release2.png";
 
 export const Free = () => {
+  const scrollRef = useRef(null);
+
+  const scroll = (dir) => {
+    const cardWidth = scrollRef.current.children[0].offsetWidth + 24; // card width + gap
+    scrollRef.current.scrollBy({
+      left: dir === "left" ? -cardWidth : cardWidth,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="free-black">
-      <div className="free">
-        <div className="free-container">
-          <div className="free-bg">
-            <div className="ellipse pink"></div>
-            <div className="ellipse green"></div>
-          </div>
-          <div className="free-content">
-            <div className="free-image">
-              <img src={icon} alt="icon" />
-            </div>
-            <h2 className="free-text">Free NFT for early birds</h2>
-            <p className="free-desc">
-              Sign up today and you'll get a free NFT when we launch
-            </p>
-          </div>
+    <div className="favorites-wrapper">
+      <div className="favorites-header">
+        
+        <h2 className="favorites-title">Team Favorites</h2>
+        <p className="favorites-desc">
+          Experiences teams love most — energizing, engaging, and impactful.
+        </p>
+      </div>
+
+      <div className="favorites-carousel-container">
+        <button className="scroll-btn left" onClick={() => scroll("left")}>&#8249;</button>
+        
+        <div className="favorites-carousel" ref={scrollRef}>
+          <Card
+            image={wellness}
+            title="Wellness Wednesdays"
+            series="Experience"
+            price="Included"
+            tag="#WELL-001"
+            time="60 min"
+          />
+          <Card
+            image={creative}
+            title="Creative Jam"
+            series="Experience"
+            price="Included"
+            tag="#CREATE-007"
+            time="90 min"
+          />
+          <Card
+            image={a}
+            title="Creative Jam"
+            series="Experience"
+            price="Included"
+            tag="#CREATE-007"
+            time="90 min"
+          />
+          <Card
+            image={b}
+            title="Creative Jam"
+            series="Experience"
+            price="Included"
+            tag="#CREATE-007"
+            time="90 min"
+          />
+          <Card
+            image={c}
+            title="Creative Jam"
+            series="Experience"
+            price="Included"
+            tag="#CREATE-007"
+            time="90 min"
+          />
+          <Card
+            image={d}
+            title="Creative Jam"
+            series="Experience"
+            price="Included"
+            tag="#CREATE-007"
+            time="90 min"
+          />
+          <Card
+            image={e}
+            title="Creative Jam"
+            series="Experience"
+            price="Included"
+            tag="#CREATE-007"
+            time="90 min"
+          />
         </div>
-        <div className="cards">
-          <div className="card1">
-            <Card
-              image={super1}
-              series="Gloop Series"
-              title="Squid GameX"
-              price={2.99}
-              tag={12983}
-              time={1}
-            />
-          </div>
-          <div className="card2">
-            <Card
-              image={release2}
-              series="Gloop Series"
-              title="Purple Man"
-              price={3.95}
-              tag="1094"
-              time={2}
-            />
-          </div>
-        </div>
+
+        <button className="scroll-btn right" onClick={() => scroll("right")}>&#8250;</button>
       </div>
     </div>
   );

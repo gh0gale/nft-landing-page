@@ -1,28 +1,34 @@
 import React from "react";
-import home from "../assets/home.png";
-import './Home.css';
-
+import home from "../assets/home.jpg";
+import "./Home.css";
 
 export const Home = () => {
   return (
     <div className="home">
       <div className="home-container">
         <div className="home-content">
-          <p className="sub-title">LAUNCHING SOON</p>
-          <h1 className="title">An NFT like no other</h1>
+          <h1 className="title">
+            Because Work<br />Should Feel Like More.
+          </h1>
+
           <p className="info">
-            Don't miss out on the release of our new NFT.
-            Sign up below to recieve updates when we go live.
+            At <strong>OneThrive</strong>, we craft experiences that bring teams closer —
+            through energizing activities, creative sessions, and wellness programs
+            designed to build a happier, more connected workplace. From small
+            startups to enterprise teams, we help people thrive, together.
           </p>
-          <button className="signup-btn">SignUp</button>
+
+          <button className="signup-btn-home">Get Started</button>
         </div>
+
         <div className="image-container">
           <div className="image-content">
-            <img src={home} className=""></img>
+            <img src={home} alt="Team collaboration" className="home-image" />
           </div>
+
           <div className="ellipse-container">
-            <div className="pink"></div>
-            <div className="orange"></div>
+            <div className="ellipse"></div>
+            <div className="ellipse"></div>
           </div>
         </div>
       </div>
