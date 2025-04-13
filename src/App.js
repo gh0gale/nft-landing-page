@@ -1,11 +1,9 @@
 import "./App.css";
 import { Nav } from "./component/Nav";
 import { Home } from "./component/Home";
-import { Free } from "./component/Free";
+import { Free } from "./component/Fav";
 import { Clients } from "./component/Clients";
-
-import { SignUp } from "./component/SignUp";
-import Footer from "./component/Footer";
+import { SignUp } from "./component/Footer";
 import { Services } from "./component/Services";
 import { Support } from "./component/Support";
 
@@ -20,7 +18,7 @@ function App() {
         <Services/>
         <Support />
         <SignUp />
-        <Footer />
+        
       </div>
     </>
   );

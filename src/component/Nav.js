@@ -21,10 +21,10 @@ export const Nav = () => {
             <a className="L" href="/About">About</a>
           </li>
           <li>
-            <a className="L" href="/Contact">Contact</a>
+            <a className="L" href="/Launch">Services</a>
           </li>
           <li>
-            <a className="L" href="/Launch">Services</a>
+            <a className="L" href="/Contact">Contact</a>
           </li>
           <li>
             <a className="SU" href="/SignUp">SignUp</a>
