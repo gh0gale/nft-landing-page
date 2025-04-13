@@ -112,6 +112,15 @@
   position: absolute;
   right: 0;
 }
+/* In fav.css */
+.favorites-carousel img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 1rem;
+}
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {

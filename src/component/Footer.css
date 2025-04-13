@@ -8,6 +8,7 @@
   justify-content: space-between;
 }
 
+/* Main container */
 .signup-container {
   display: flex;
   justify-content: space-around;
@@ -17,15 +18,24 @@
   gap: 2rem;
 }
 
+/* Brand section */
 .brand-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .brand-logo {
   width: 160px;
   margin-bottom: 1.5rem;
+}
+
+.social-text {
+  font-size: 1.05rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .social-icons {
@@ -38,13 +48,14 @@
 .social-icons li a {
   color: #00fca7;
   font-size: 1.8rem;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .social-icons li a:hover {
   color: #00fca7cc;
 }
 
+/* Image section */
 .image-section {
   display: flex;
   align-items: center;
@@ -59,57 +70,6 @@
 
 /* Footer */
 .footer {
-  padding: 2rem 1rem 1rem;
-  border-top: 1px solid #00fca7;
-  text-align: center;
-  background: #000;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.footer-links a {
-  color: #00fca7;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.3s;
-}
-
-.footer-links a:hover {
-  color: #00fca7cc;
-}
-
-.footer-copy {
-  font-size: 0.85rem;
-  color: #ccc;
-}
-
-@media (max-width: 768px) {
-  .signup-container {
-    flex-direction: column;
-  }
-
-  .signup-image {
-    max-width: 80%;
-  }
-
-  .footer-links {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-}
-.social-text {
-  font-size: 1.05rem;
-  color: #ccc;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-.footer {
   padding: 2rem 1rem;
   background-color: #000;
   text-align: center;
@@ -120,20 +80,23 @@
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
   flex-wrap: wrap;
+  gap: 1.5rem;
   margin-bottom: 1rem;
 }
 
+.footer-links a,
 .footer-links button {
+  color: #00fca7;
+  text-decoration: none;
+  font-size: 0.95rem;
   background: none;
   border: none;
-  color: #00fca7;
   cursor: pointer;
-  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
+.footer-links a:hover,
 .footer-links button:hover {
   color: #ffffff;
 }
@@ -150,4 +113,40 @@
   margin-top: 1.5rem;
   color: #666;
   font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .signup-container {
+    padding: 3rem 1rem;
+  }
+
+  .brand-logo {
+    width: 140px;
+  }
+
+  .signup-image {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .signup-image {
+    max-width: 80%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .footer-content {
+    padding: 0 1rem;
+  }
 }

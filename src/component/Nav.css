@@ -1,28 +1,38 @@
+/* Reset & base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Main navigation container */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
+/* Brand container styling */
 .brand-container {
   display: flex;
   align-items: center;
-  padding: 20px 30px;
-  margin: 0px;
+  padding: 0; /* Adjust padding to match the nav spacing */
+  margin: 0;
 }
 
 .brand {
   color: white;
+  font-size: 24px;
+  font-weight: bold;
 }
 
+/* List container for nav items */
 .list-container {
   display: flex;
   justify-content: flex-end;
@@ -38,14 +48,40 @@ nav {
   padding: 0;
 }
 
-.L {
+/* Navigation links */
+.L, .SU {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 .SU {
   color: #00FCA7;
-  text-decoration: none;
-  font-size: 18px;
+}
+
+.L:hover, .SU:hover {
+  color: #00FCA7; /* On hover, the text will change to the primary accent color */
+}
+
+/* Mobile-responsive styles */
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 15px;
+    justify-content: space-between;
+  }
+
+  .list-container {
+    display: none; /* Hide the nav links on small screens */
+  }
+
+  .brand-container {
+    padding-left: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .brand {
+    font-size: 20px; /* Slightly smaller font size for mobile */
+  }
+
+  /* Add a mobile-friendly hamburger menu here if needed */
 }
